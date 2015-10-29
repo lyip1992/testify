@@ -52,11 +52,12 @@ describe('the todo.util methods', function(){
 
   describe('the getUniqueId function', function(){
     it('should return 1 on first invocation', function(){
-
+      expect(todo.util.getUniqueId()).to.equal(1);
     });
 
     it('should increment after each invocation', function(){
-
+      expect(todo.util.getUniqueId()).to.equal(2);
+      expect(todo.util.getUniqueId()).to.equal(3);
     });
   });
 });
