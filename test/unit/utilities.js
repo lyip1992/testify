@@ -17,5 +17,18 @@ describe('the todo.App', function(){
   });
 });
 
-describe('the todo.util methods', function() {
+describe('the todo.util methods', function(){
+  describe('the trimTodoName function', function(){
+    it('should remove leading whitespace', function(){
+
+    });
+
+    it('should remove trailing whitespace', function(){
+
+    });
+
+    it('should remove leading and trailing whitespace', function(){
+
+    });
+  });
 });
