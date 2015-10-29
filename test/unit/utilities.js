@@ -34,19 +34,19 @@ describe('the todo.util methods', function(){
 
   describe('the isValidTodoName function', function(){
     it('should be invalid for empty string', function(){
-
+      expect(todo.util.isValidTodoName('')).to.equal(false);
     });
 
     it('should be invalid for string of length 1', function(){
-
+      expect(todo.util.isValidTodoName('a')).to.equal(false);
     });
 
     it('should be invalid for string consisting of spaces', function(){
-
+      expect(todo.util.isValidTodoName('   ')).to.not.equal(true);
     });
 
     it('should be valid for string of length 2', function(){
-
+      expect(todo.util.isValidTodoName('ab')).to.equal(true);
     });
   });
 });
