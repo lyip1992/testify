@@ -1,3 +1,5 @@
 dist/
 results/
 node_modules/
+
+*.swp
