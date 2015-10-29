@@ -31,4 +31,22 @@ describe('the todo.util methods', function(){
       assert(todo.util.trimTodoName(' name '), 'name');
     });
   });
+
+  describe('the isValidTodoName function', function(){
+    it('should be invalid for empty string', function(){
+
+    });
+
+    it('should be invalid for string of length 1', function(){
+
+    });
+
+    it('should be invalid for string consisting of spaces', function(){
+
+    });
+
+    it('should be valid for string of length 2', function(){
+
+    });
+  });
 });
