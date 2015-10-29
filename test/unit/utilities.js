@@ -49,4 +49,14 @@ describe('the todo.util methods', function(){
       expect(todo.util.isValidTodoName('ab')).to.equal(true);
     });
   });
+
+  describe('the getUniqueId function', function(){
+    it('should return 1 on first invocation', function(){
+
+    });
+
+    it('should increment after each invocation', function(){
+
+    });
+  });
 });
