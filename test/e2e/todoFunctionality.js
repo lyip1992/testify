@@ -76,6 +76,9 @@ casper.test.begin('Marks todo items as done', 1, function suite(test){
     this.fill('form.todo-form', {
       todo: 'Item1'
     }, true);
+
+    // Mark item as done
+    this.click('.todo-done');
   });
 });
 
