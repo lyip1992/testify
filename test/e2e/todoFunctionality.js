@@ -64,6 +64,10 @@ casper.test.begin('Adds and removes multiple todo items', 3, function suite(test
     this.click('.todo-remove');
     test.assertElementCount('.todo-list .todo-item', 0, '0 items should remain after removal');
   });
+
+  casper.run(function(){
+    test.done();
+  });
 });
 
 casper.test.begin('Marks todo items as done', 1, function suite(test){
