@@ -96,4 +96,8 @@ casper.test.begin('Does not add empty todo items', 1, function suite(test){
 
     test.assertDoesntExist('.todo-list .todo-item', 'List item should not be added for empty todos');
   });
+
+  casper.run(function(){
+    test.done();
+  });
 });
