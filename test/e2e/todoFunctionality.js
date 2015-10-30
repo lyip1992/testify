@@ -79,6 +79,9 @@ casper.test.begin('Marks todo items as done', 1, function suite(test){
 
     // Mark item as done
     this.click('.todo-done');
+
+    // Check that item was marked as done
+    test.assertExists('.todo-item--done', 'List item should be marked as done');
   });
 });
 
