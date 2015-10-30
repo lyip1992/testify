@@ -51,6 +51,12 @@ casper.test.begin('Adds and removes multiple todo items', 3, function suite(test
 
     // Check that items were added to the list
     test.assertElementCount('.todo-list .todo-item', 3, '3 items should have been added');
+
+    // Check that the names are correct
+    test.assert(casper.evaluate(function(){
+      var inputs = document.querySelectorAll('.todo-list .todo-item .todo-input');
+      return inputs[0].value === 'Item1' && inputs[1].value === 'Item2' && inputs[2].value === 'Item3';
+    }), 'Items should contain added item names in correct order');
   });
 });
 
