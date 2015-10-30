@@ -57,6 +57,12 @@ casper.test.begin('Adds and removes multiple todo items', 3, function suite(test
       var inputs = document.querySelectorAll('.todo-list .todo-item .todo-input');
       return inputs[0].value === 'Item1' && inputs[1].value === 'Item2' && inputs[2].value === 'Item3';
     }), 'Items should contain added item names in correct order');
+
+    // Remove all items
+    this.click('.todo-remove');
+    this.click('.todo-remove');
+    this.click('.todo-remove');
+    test.assertElementCount('.todo-list .todo-item', 0, '0 items should remain after removal');
   });
 });
 
