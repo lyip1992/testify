@@ -19,6 +19,11 @@ describe('API integration', function(){
     ]);
   });
 
+  after(function(){
+    server.restore();
+    todo.setup.restore();
+  });
+
   it('todo.setup receives an array of todos when todo.init is called', function () {
   });
 });
