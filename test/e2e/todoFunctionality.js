@@ -48,6 +48,9 @@ casper.test.begin('Adds and removes multiple todo items', 3, function suite(test
     this.fill('form.todo-form', {
       todo: 'Item3'
     }, true);
+
+    // Check that items were added to the list
+    test.assertElementCount('.todo-list .todo-item', 3, '3 items should have been added');
   });
 });
 
