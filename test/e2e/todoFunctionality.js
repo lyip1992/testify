@@ -10,4 +10,18 @@ casper.test.begin('App is setup correctly', 2, function suite(test){
   });
 });
 
+casper.test.begin('Adds and removes todo items', 3, function suite(test){
 
+});
+
+casper.test.begin('Adds and removes multiple todo items', 3, function suite(test){
+
+});
+
+casper.test.begin('Marks todo items as done', 1, function suite(test){
+
+});
+
+casper.test.begin('Does not add empty todo items', 1, function suite(test){
+
+});
