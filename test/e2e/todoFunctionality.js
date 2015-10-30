@@ -24,6 +24,10 @@ casper.test.begin('Adds and removes todo items', 3, function suite(test){
       type: 'css',
       path: '.todo-list .todo-item .todo-input'
     }, 'Item1', 'List item should contain added item name');
+
+    // Mark item as done
+    this.click('.todo-remove');
+    test.assertDoesntExist('.todo-list .todo-item', 'List item should not exist after item is removed');
   });
 });
 
