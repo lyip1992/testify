@@ -11,7 +11,11 @@ casper.test.begin('App is setup correctly', 2, function suite(test){
 });
 
 casper.test.begin('Adds and removes todo items', 3, function suite(test){
-
+  casper.start('http://localhost:3000/', function(){
+    this.fill('.todo-form', {
+      todo: 'Item1'
+    }, true);
+  });
 });
 
 casper.test.begin('Adds and removes multiple todo items', 3, function suite(test){
