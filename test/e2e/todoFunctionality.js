@@ -83,6 +83,10 @@ casper.test.begin('Marks todo items as done', 1, function suite(test){
     // Check that item was marked as done
     test.assertExists('.todo-item--done', 'List item should be marked as done');
   });
+
+  casper.run(function(){
+    test.done();
+  });
 });
 
 casper.test.begin('Does not add empty todo items', 1, function suite(test){
