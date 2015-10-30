@@ -71,7 +71,12 @@ casper.test.begin('Adds and removes multiple todo items', 3, function suite(test
 });
 
 casper.test.begin('Marks todo items as done', 1, function suite(test){
-
+  casper.start('http://localhost:3000/', function(){
+    // Add item
+    this.fill('form.todo-form', {
+      todo: 'Item1'
+    }, true);
+  });
 });
 
 casper.test.begin('Does not add empty todo items', 1, function suite(test){
