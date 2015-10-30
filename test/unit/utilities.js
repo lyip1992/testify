@@ -4,7 +4,6 @@ var expect = chai.expect;
 
 describe('the todo.App', function(){
   describe('the todo object', function(){
-
     it('should be an object', function(){
       expect(todo).to.be.a('object');
     });
