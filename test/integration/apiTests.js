@@ -10,6 +10,13 @@ describe('API integration', function(){
       ]
     };
     setupStub = sinon.stub(todo, 'setup');
+
+    server = sinon.fakeServer.create();
+    server.respondWith('GET', 'http://localhost:3000/todos', [
+      200,
+      { 'Content-Type': 'application/json' },
+      JSON.stringify(JSONresponse)
+    ]);
   });
 
   it('todo.setup receives an array of todos when todo.init is called', function () {
