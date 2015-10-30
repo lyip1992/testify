@@ -18,6 +18,12 @@ casper.test.begin('Adds and removes todo items', 3, function suite(test){
 
     // Check that item was added to the list
     test.assertExists('.todo-list .todo-item', 'List item should exist after being added');
+
+    // Check that the name is correct
+    test.assertField({
+      type: 'css',
+      path: '.todo-list .todo-item .todo-input'
+    }, 'Item1', 'List item should contain added item name');
   });
 });
 
