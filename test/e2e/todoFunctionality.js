@@ -15,6 +15,9 @@ casper.test.begin('Adds and removes todo items', 3, function suite(test){
     this.fill('.todo-form', {
       todo: 'Item1'
     }, true);
+
+    // Check that item was added to the list
+    test.assertExists('.todo-list .todo-item', 'List item should exist after being added');
   });
 });
 
