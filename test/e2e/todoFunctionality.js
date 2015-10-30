@@ -90,5 +90,8 @@ casper.test.begin('Marks todo items as done', 1, function suite(test){
 });
 
 casper.test.begin('Does not add empty todo items', 1, function suite(test){
-
+  casper.start('http://localhost:3000/', function(){
+    // Submit the form without filling it out
+    this.fill('form.todo-form', {}, true);
+  });
 });
